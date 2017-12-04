@@ -23,3 +23,11 @@ val thomasCrownAffair = new Film("The Thomas Crown Affair", 1999, 6.8, mcTiernan
 eastwood.yearOfBirth // should be 1930
 dieHard.director.name // should be "John McTiernan"
 invictus.isDirectedBy(nolan) // should be false
+
+highPlainsDrifter.copy(name = "L'homme des hautes plaines") // returns Film("L'homme des hautes plaines", 1973, 7.7, /* etc */)
+thomasCrownAffair.copy(yearOfRelease = 1968, director = new Director("Norman", "Jewison", 1926)) // returns Film("The Thomas Crown Affair", 1926, /* etc */)
+inception.copy().copy().copy() // returns a new copy of `inception`
+
+val zemeckis: Director = Director("Robert", "Zemeckis", 1952)
+
+Director.older(zemeckis, eastwood) // should be eastwood

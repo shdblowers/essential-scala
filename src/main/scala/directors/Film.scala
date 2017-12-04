@@ -5,11 +5,10 @@ class Film(
             val yearOfRelease: Int,
             val imdbRating: Double,
             val director: Director) {
-  def directorsAge: Int =
-    yearOfRelease - director.yearOfBirth
 
-  def isDirectedBy(director: Director): Boolean =
-    this.director == director
+  def directorsAge: Int = yearOfRelease - director.yearOfBirth
+
+  def isDirectedBy(director: Director): Boolean = this.director == director
 
   def copy(
             name: String = this.name,
