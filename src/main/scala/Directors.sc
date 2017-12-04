@@ -29,5 +29,10 @@ thomasCrownAffair.copy(yearOfRelease = 1968, director = new Director("Norman", "
 inception.copy().copy().copy() // returns a new copy of `inception`
 
 val zemeckis: Director = Director("Robert", "Zemeckis", 1952)
+val backToTheFuture: Film = Film("Back to the Future", 1985, 8.5, zemeckis)
 
 Director.older(zemeckis, eastwood) // should be eastwood
+
+Film.highestRating(dieHard, granTorino) // Die Hard with 8.3
+
+Film.oldestDirectorAtTheTime(predator, memento)
